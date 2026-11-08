@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Person Behind — Jurnal tengah malam interaktif dan ruang pameran pemikiran, eksperimen, serta karya Adnan Sya’ban Mubarok.">
+    <meta name="theme-color" content="#08080A">
+    <title>Adnan Sya’ban Mubarok — The Person Behind (Nocturnal Journal)</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Google Fonts: Instrument Serif, Plus Jakarta Sans, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Skip to Main Content for Keyboard Users -->
+    <a href="#app-content" class="skip-link">Langsung ke konten utama</a>
+
+    <!-- Analog Film Grain Texture Overlay -->
+    <div class="film-grain" aria-hidden="true"></div>
+
+    <!-- Interactive Cursor Lantern (Desktop) -->
+    <div class="cursor-aura" id="cursor-aura" aria-hidden="true"></div>
+
+    <!-- Ambient Breathing Crimson Orbs (Background Atmosphere) -->
+    <div class="ambient-canvas" aria-hidden="true">
+        <div class="ambient-orb ambient-orb--1"></div>
+        <div class="ambient-orb ambient-orb--2"></div>
+        <div class="ambient-orb ambient-orb--3"></div>
+    </div>
+
+    <!-- Top Scroll Progress Bar -->
+    <div class="scroll-progress" role="progressbar" aria-label="Progres membaca halaman" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="scroll-progress-container">
+        <div class="scroll-progress__bar" id="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Floating Capsule Header Navigation -->
+    <header class="site-header" id="site-header">
+        <div class="site-header__inner">
+            <a href="#hero" class="brand-mark" aria-label="Adnan Sya’ban Mubarok - Kembali ke atas">
+                <span class="brand-mark__initials">ASM</span>
+                <span class="brand-mark__dot" aria-hidden="true"></span>
+                <span class="brand-mark__label">THE PERSON BEHIND</span>
+            </a>
+
+            <nav class="capsule-nav" aria-label="Navigasi Bab Utama">
+                <ul class="capsule-nav__list">
+                    <li>
+                        <a href="#about" class="capsule-nav__link" data-section="about">
+                            <span class="capsule-nav__indicator" aria-hidden="true"></span>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#curiosity" class="capsule-nav__link" data-section="curiosity">
+                            <span class="capsule-nav__indicator" aria-hidden="true"></span>
+                            <span>Curiosity</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#journey" class="capsule-nav__link" data-section="journey">
+                            <span class="capsule-nav__indicator" aria-hidden="true"></span>
+                            <span>Journey</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#works" class="capsule-nav__link" data-section="works">
+                            <span class="capsule-nav__indicator" aria-hidden="true"></span>
+                            <span>Works</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#now" class="capsule-nav__link" data-section="now">
+                            <span class="capsule-nav__indicator" aria-hidden="true"></span>
+                            <span>Now</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-meta">
+                <div class="header-status" title="Zona Waktu & Status Malam">
+                    <span class="header-status__dot" aria-hidden="true"></span>
+                    <span class="header-status__time" id="nocturnal-clock">23:42 WIB</span>
+                </div>
+                <a href="#contact" class="header-cta">Diskusi ↗</a>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button
+                    type="button"
+                    class="mobile-nav-toggle"
+                    id="mobile-nav-toggle"
+                    aria-label="Buka menu navigasi"
+                    aria-expanded="false"
+                    aria-controls="mobile-nav-overlay"
+                >
+                    <span class="mobile-nav-toggle__line"></span>
+                    <span class="mobile-nav-toggle__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Fullscreen Dark-Red Glass Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true">
+        <div class="mobile-nav-overlay__backdrop" id="mobile-nav-backdrop"></div>
+        <div class="mobile-nav-overlay__panel">
+            <div class="mobile-nav-overlay__header">
+                <span class="section-tag">
+                    <span class="section-tag__pulse"></span>
+                    INDEX // BAB JURNAL MALAM
+                </span>
+            </div>
+            <nav aria-label="Menu Mobile">
+                <ul class="mobile-nav-list">
+                    <li><a href="#hero" class="mobile-nav-link" data-section="hero"><span>01</span> The Opening Aura</a></li>
+                    <li><a href="#about" class="mobile-nav-link" data-section="about"><span>02</span> Philosophy & Mind</a></li>
+                    <li><a href="#curiosity" class="mobile-nav-link" data-section="curiosity"><span>03</span> Sparks of Curiosity</a></li>
+                    <li><a href="#journey" class="mobile-nav-link" data-section="journey"><span>04</span> Unfiltered Journey</a></li>
+                    <li><a href="#works" class="mobile-nav-link" data-section="works"><span>05</span> Selected Works & Details</a></li>
+                    <li><a href="#now" class="mobile-nav-link" data-section="now"><span>06</span> The Now Dashboard</a></li>
+                    <li><a href="#contact" class="mobile-nav-link" data-section="contact"><span>07</span> Midnight Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-nav-overlay__footer">
+                <p>Diseduh dengan kopi hitam & rasa ingin tahu yang belum selesai.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Single-Page Narrative Container -->
+    <main id="app-content">
+<!-- Akhir Part 1. Tag yang masih terbuka: <body>, <main id="app-content"> (akan diisi di Part 2–5 dan ditutup di Part 5) -->
+    <!-- Melanjutkan konten di dalam <main id="app-content"> dari Part 1 -->
+
+        <!-- =================================================================
+             SECTION 01 — HERO SECTION (THE OPENING AURA)
+             ================================================================= -->
+        <section id="hero" class="section hero-section" aria-labelledby="hero-heading">
+            <div class="hero-aura-backdrop" aria-hidden="true"></div>
+
+            <div class="container hero-grid">
+                <!-- Sisi Kiri: Sapaan, Glowing Word Rotator & Narasi Pembuka -->
+                <div class="hero-content">
+                    <div class="hero-stagger" style="--stagger-index: 1;">
+                        <span class="section-tag">
+                            <span class="section-tag__pulse" aria-hidden="true"></span>
+                            <span>✦ 01 // SOSOK DI BALIK SEMUANYA</span>
+                        </span>
+                    </div>
+
+                    <h1 id="hero-heading" class="hero-title hero-stagger" style="--stagger-index: 2;">
+                        Hi, I’m <span class="hero-title__name">Adnan Sya’ban Mubarok.</span><br>
+                        <span class="hero-rotator-line">
+                            I <span class="word-rotator" id="hero-word-rotator" aria-live="polite">explore</span> the unknown,
+                        </span><br>
+                        I <span class="verb-crimson">learn</span> relentlessly, and<br>
+                        I <span class="verb-crimson">build</span> digital experiences.
+                    </h1>
+
+                    <p class="hero-lead hero-stagger" style="--stagger-index: 3;">
+                        Selamat datang di ruang kerja tengah malam saya. Bukan sebuah brosur pencapaian yang dipoles sempurna, melainkan jurnal hidup tentang rasa penasaran, eksperimen antarmuka, dan proses belajar yang tidak pernah benar-benar selesai.
+                    </p>
+
+                    <div class="hero-actions hero-stagger" style="--stagger-index: 4;">
+                        <a href="#works" class="btn-crimson">
+                            <span>Telusuri Karya &amp; Proses</span>
+                            <svg class="btn-crimson__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#about" class="btn-ghost-crimson">
+                            <span>Baca Catatan Filosofi</span>
+                        </a>
+                    </div>
+
+                    <dl class="hero-coordinates hero-stagger" style="--stagger-index: 5;">
+                        <div class="hero-coordinates__item">
+                            <dt>KOORDINAT</dt>
+                            <dd>06°12'S 106°50'E // ID</dd>
+                        </div>
+                        <div class="hero-coordinates__item">
+                            <dt>PENDEKATAN</dt>
+                            <dd>Lifelong Learner &amp; Builder</dd>
+                        </div>
+                        <div class="hero-coordinates__item">
+                            <dt>EDISI JURNAL</dt>
+                            <dd>Nocturnal Vol. IV — 2026</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <!-- Sisi Kanan: Visual Personal (Low-Key Portrait + Corner Brackets + Floating Badge) -->
+                <div class="hero-visual hero-stagger" style="--stagger-index: 3;">
+                    <div class="portrait-stage">
+                        <!-- Siku Ornamen Merah (Corner Brackets) -->
+                        <span class="corner-bracket corner-bracket--tl" aria-hidden="true"></span>
+                        <span class="corner-bracket corner-bracket--tr" aria-hidden="true"></span>
+                        <span class="corner-bracket corner-bracket--bl" aria-hidden="true"></span>
+                        <span class="corner-bracket corner-bracket--br" aria-hidden="true"></span>
+
+                        <div class="portrait-frame__HeaderMeta" aria-hidden="true">
+                            <span>ARCHIVE // PORTRAIT_01.RAW</span>
+                            <span>ISO 1600 · f/1.4</span>
+                        </div>
+
+                        <!-- Bingkai Lengkung Potret -->
+                        <figure class="portrait-frame">
+                            <!-- Foto potret dari folder assets -->
+                            <img
+                                src="assets/images/AdnanKing.jpg"
+                                alt="Potret low-key Adnan Sya’ban Mubarok dalam pencahayaan merah gelap"
+                                class="portrait-frame__img"
+                                loading="eager"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                            >
+                            <div class="portrait-fallback" role="img" aria-label="Ilustrasi siluet potret Adnan Sya’ban Mubarok di ruang kerja malam">
+                                <svg class="portrait-fallback__svg" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <defs>
+                                        <radialGradient id="crimsonPortraitGlow" cx="50%" cy="38%" r="55%">
+                                            <stop offset="0%" stop-color="#E11D48" stop-opacity="0.55" />
+                                            <stop offset="55%" stop-color="#881337" stop-opacity="0.22" />
+                                            <stop offset="100%" stop-color="#08080A" stop-opacity="0" />
+                                        </radialGradient>
+                                        <linearGradient id="silhouetteGrad" x1="200" y1="110" x2="200" y2="490" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0%" stop-color="#26171E" />
+                                            <stop offset="100%" stop-color="#09080C" />
+                                        </linearGradient>
+                                    </defs>
+                                    <rect width="400" height="500" fill="#0B090D" />
+                                    <circle cx="200" cy="195" r="165" fill="url(#crimsonPortraitGlow)" />
+                                    <circle cx="200" cy="195" r="115" stroke="rgba(225,29,72,0.22)" stroke-dasharray="3 6" />
+                                    <!-- Rim-lit Low-key Silhouette -->
+                                    <path d="M95 495C98 388 138 332 200 332C262 332 302 388 305 495H95Z" fill="url(#silhouetteGrad)" stroke="#E11D48" stroke-opacity="0.45" stroke-width="1.5" />
+                                    <circle cx="200" cy="210" r="68" fill="url(#silhouetteGrad)" stroke="#FB7185" stroke-opacity="0.5" stroke-width="1.5" />
+                                    <path d="M150 185C166 150 228 148 250 185" stroke="#E11D48" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                                <div class="portrait-fallback__caption">
+                                    <span>LOW-KEY PORTRAIT</span>
+                                    <small>assets/images/AdnanKing.jpg</small>
+                                </div>
+                            </div>
+
+                            <div class="portrait-frame__vignette" aria-hidden="true"></div>
+                        </figure>
+
+                        <!-- Kartu Status Melayang di Pojok Bawah Foto -->
+                        <aside class="status-float-card" aria-label="Status saat ini">
+                            <span class="status-float-card__dot" aria-hidden="true"></span>
+                            <div class="status-float-card__body">
+                                <span class="status-float-card__label">CURRENT LOG // 00:15</span>
+                                <p class="status-float-card__text">
+                                    Status: Mengubah kopi &amp; rasa penasaran menjadi baris kode.
+                                </p>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ornamen Pemisah Antar-Bab -->
+        <div class="crimson-divider" aria-hidden="true">
+            <span class="crimson-divider__line"></span>
+            <span class="crimson-divider__star">✦</span>
+            <span class="crimson-divider__line"></span>
+        </div>
+
+        <!-- =================================================================
+             SECTION 02 — THE INTRODUCTION (FILOSOFI & PIKIRAN)
+             ================================================================= -->
+        <section id="about" class="section intro-section" aria-labelledby="intro-heading">
+            <div class="container container--narrow">
+                <div class="intro-header reveal-up">
+                    <span class="section-tag">
+                        <span class="section-tag__pulse" aria-hidden="true"></span>
+                        <span>✦ 02 // CARA SAYA MELIHAT DUNIA</span>
+                    </span>
+                    <h2 id="intro-heading" class="section-title">
+                        Beyond polished surfaces, there is always a <em>restless question.</em>
+                    </h2>
+                </div>
+
+                <!-- Kutipan Jurnal dengan Garis Vertikal Merah di Sisi Kiri -->
+                <article class="journal-quote-block reveal-up">
+                    <div class="journal-quote-block__thread" aria-hidden="true">
+                        <span class="journal-quote-block__node"></span>
+                    </div>
+
+                    <div class="journal-quote-block__content">
+                        <p class="journal-paragraph journal-paragraph--lead">
+                            “I never really liked pretending to know everything. Bagi saya, bagian paling menarik dari teknologi dan desain bukanlah saat semuanya selesai dengan sempurna, melainkan
+                            <button
+                                type="button"
+                                class="thought-trigger"
+                                data-note="Di jam-jam tenang ketika notifikasi berhenti, ego ikut mereda—menyisakan kejujuran antara logika yang patah dan imajinasi yang mencari celah baru."
+                                aria-describedby="thought-tooltip-live"
+                            >momen di tengah malam</button>
+                            ketika sebuah ide gagal, lalu rasa penasaran memaksa saya mencari jalan lain.”
+                        </p>
+
+                        <p class="journal-paragraph">
+                            Banyak ruang di internet yang menuntut kita tampil bak pakar tanpa celah. Namun saya percaya bahwa karya terbaik lahir dari keberanian untuk mengakui ketidaktahuan—dari kesediaan melakukan
+                            <button
+                                type="button"
+                                class="thought-trigger"
+                                data-note="Melepaskan pola lama atau solusi instan yang terasa nyaman, demi merakit ulang fondasi yang benar-benar relevan dengan masalah manusianya."
+                                aria-describedby="thought-tooltip-live"
+                            >unlearning</button>,
+                            membongkar asumsi sendiri, dan memperlakukan setiap barisan kode maupun piksel antarmuka sebagai
+                            <button
+                                type="button"
+                                class="thought-trigger"
+                                data-note="Bukan sekadar artefak teknis yang dingin, melainkan percakapan dua arah antara pembuat dan perasaan orang yang menggunakannya."
+                                aria-describedby="thought-tooltip-live"
+                            >medium bercerita yang bernyawa</button>.
+                        </p>
+
+                        <footer class="journal-meta">
+                            <span class="journal-meta__hint">
+                                <span class="journal-meta__dot" aria-hidden="true"></span>
+                                Tip: Arahkan kursor atau tekan istilah bergaris bawah titik-titik merah untuk membaca catatan pinggir (side-notes).
+                            </span>
+                            <span class="journal-meta__signature">— Adnan Sya’ban Mubarok, Catatan Jurnal #02</span>
+                        </footer>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Popover Catatan Pinggir (Interactive Thought Note Tooltip) -->
+        <div id="thought-tooltip-live" class="thought-popover" role="tooltip" aria-hidden="true">
+            <span class="thought-popover__tag">✦ CATATAN PINGGIR // SIDE-NOTE</span>
+            <p class="thought-popover__text" id="thought-popover-text"></p>
+        </div>
+
+        <!-- Akhir Part 2. Tag yang masih terbuka: <body>, <main id="app-content"> (dilanjutkan di Part 3 dan ditutup di Part 5) -->
+            <!-- Melanjutkan konten di dalam <main id="app-content"> dari Part 2 -->
+
+        <!-- Ornamen Pemisah Antar-Bab -->
+        <div class="crimson-divider" aria-hidden="true">
+            <span class="crimson-divider__line"></span>
+            <span class="crimson-divider__star">✦</span>
+            <span class="crimson-divider__line"></span>
+        </div>
+
+        <!-- =================================================================
+             SECTION 03 — WHAT SPARKS MY CURIOSITY (OBSESI & MINAT)
+             ================================================================= -->
+        <section id="curiosity" class="section curiosity-section" aria-labelledby="curiosity-heading">
+            <div class="container">
+                <header class="section-header reveal-up">
+                    <span class="section-tag">
+                        <span class="section-tag__pulse" aria-hidden="true"></span>
+                        <span>✦ 03 // OBSESI &amp; MINAT INTELEKTUAL</span>
+                    </span>
+                    <div class="section-header__split">
+                        <h2 id="curiosity-heading" class="section-title">
+                            What sparks my <em>relentless curiosity.</em>
+                        </h2>
+                        <p class="section-subtitle">
+                            Bukan sekadar daftar keahlian atau bar persentase kaku, melainkan tiga pertanyaan mendasar yang selalu menahan saya tetap terjaga di depan layar.
+                        </p>
+                    </div>
+                </header>
+
+                <!-- Grid 3 Kolom Kartu Dark-Glass (Dirender & Diperkaya secara terstruktur lewat JS + Fallback Statis) -->
+                <div class="curiosity-grid" id="curiosity-grid">
+                    <!-- Kartu 01: Creative Engineering -->
+                    <article class="curiosity-card reveal-up">
+                        <div class="curiosity-card__glow" aria-hidden="true"></div>
+                        <div class="curiosity-card__top">
+                            <span class="curiosity-card__number">01 // PILLAR</span>
+                            <span class="curiosity-card__icon" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                    <line x1="14" y1="4" x2="10" y2="20"></line>
+                                </svg>
+                            </span>
+                        </div>
+                        <h3 class="curiosity-card__title">Creative Engineering</h3>
+                        <blockquote class="curiosity-card__quote">
+                            “Not just writing code, but crafting logic that feels alive and responds to human emotion.”
+                        </blockquote>
+                        <p class="curiosity-card__desc">
+                            Menjembatani presisi algoritma dengan kepekaan artistik. Saya senang mengeksplorasi bagaimana transisi mikro, fisika pegas, dan manipulasi DOM yang efisien mampu mengubah halaman statis menjadi ruang yang bernapas.
+                        </p>
+                        <ul class="curiosity-card__tags" aria-label="Fokus eksplorasi Creative Engineering">
+                            <li>Interactive Physics</li>
+                            <li>Vanilla JS Architecture</li>
+                            <li>Tactile Motion</li>
+                        </ul>
+                    </article>
+
+                    <!-- Kartu 02: Interface Psychology -->
+                    <article class="curiosity-card reveal-up">
+                        <div class="curiosity-card__glow" aria-hidden="true"></div>
+                        <div class="curiosity-card__top">
+                            <span class="curiosity-card__number">02 // PILLAR</span>
+                            <span class="curiosity-card__icon" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="12" cy="12" r="4"></circle>
+                                    <line x1="21.17" y1="8" x2="12" y2="8"></line>
+                                    <line x1="3.95" y1="6.06" x2="8.54" y2="14"></line>
+                                    <line x1="10.88" y1="21.94" x2="15.46" y2="14"></line>
+                                </svg>
+                            </span>
+                        </div>
+                        <h3 class="curiosity-card__title">Interface Psychology</h3>
+                        <blockquote class="curiosity-card__quote">
+                            “Memahami mengapa sebuah tombol terasa nyaman ditekan dan bagaimana ruang gelap membangun fokus.”
+                        </blockquote>
+                        <p class="curiosity-card__desc">
+                            Setiap jeda waktu 200 milidetik, kontras tipografi di atas latar gelap, dan umpan balik visual membawa pesan bawah sadar. Saya meneliti bagaimana desain mampu menenangkan beban kognitif pembaca.
+                        </p>
+                        <ul class="curiosity-card__tags" aria-label="Fokus eksplorasi Interface Psychology">
+                            <li>Cognitive Flow</li>
+                            <li>Nocturnal Ergonomics</li>
+                            <li>Editorial Hierarchy</li>
+                        </ul>
+                    </article>
+
+                    <!-- Kartu 03: System & Architecture -->
+                    <article class="curiosity-card reveal-up">
+                        <div class="curiosity-card__glow" aria-hidden="true"></div>
+                        <div class="curiosity-card__top">
+                            <span class="curiosity-card__number">03 // PILLAR</span>
+                            <span class="curiosity-card__icon" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                    <polyline points="2 17 12 22 22 17"></polyline>
+                                    <polyline points="2 12 12 17 22 12"></polyline>
+                                </svg>
+                            </span>
+                        </div>
+                        <h3 class="curiosity-card__title">System &amp; Architecture</h3>
+                        <blockquote class="curiosity-card__quote">
+                            “Membongkar kerumitan di balik layar agar pengalaman di depan layar terasa ringan dan mengalir.”
+                        </blockquote>
+                        <p class="curiosity-card__desc">
+                            Keindahan visual tidak berarti apa-apa jika fondasinya rapuh. Saya terobsesi menyusun token sistem desain yang disiplin, struktur kode modular, dan performa yang menghormati perangkat pengguna.
+                        </p>
+                        <ul class="curiosity-card__tags" aria-label="Fokus eksplorasi System & Architecture">
+                            <li>Design Tokens</li>
+                            <li>Zero-Bloat Code</li>
+                            <li>Resilient State</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ornamen Pemisah Antar-Bab -->
+        <div class="crimson-divider" aria-hidden="true">
+            <span class="crimson-divider__line"></span>
+            <span class="crimson-divider__star">✦</span>
+            <span class="crimson-divider__line"></span>
+        </div>
+
+        <!-- =================================================================
+             SECTION 04 — MY JOURNEY & UNFILTERED MILESTONES (JEJAK WAKTU)
+             ================================================================= -->
+        <section id="journey" class="section journey-section" aria-labelledby="journey-heading">
+            <div class="journey-ambient-orb" aria-hidden="true"></div>
+
+            <div class="container container--narrow">
+                <header class="section-header reveal-up">
+                    <span class="section-tag">
+                        <span class="section-tag__pulse" aria-hidden="true"></span>
+                        <span>✦ 04 // JEJAK WAKTU &amp; TITIK BALIK</span>
+                    </span>
+                    <h2 id="journey-heading" class="section-title">
+                        My journey &amp; <em>unfiltered milestones.</em>
+                    </h2>
+                    <p class="section-subtitle">
+                        Dari rasa penasaran pada AI hingga persiapan menekuni Informatika, setiap tahap membawa hal baru untuk dipelajari dan dijelajahi.
+                    </p>
+                </header>
+
+                <!-- Glowing Red Thread Timeline Container -->
+                <div class="timeline" id="journey-timeline">
+                    <!-- Jalur Benang Merah Vertikal (Track & Glowing Progress Fill) -->
+                    <div class="timeline__track" aria-hidden="true">
+                        <div class="timeline__thread-fill" id="timeline-thread-fill"></div>
+                    </div>
+
+                    <!-- Daftar tahap perjalanan, dari awal hingga saat ini -->
+                    <ol class="timeline__list" id="timeline-list">
+                        <li class="timeline-item" data-year="2022" data-kind="milestone">
+                            <div class="timeline-item__marker" aria-hidden="true"><span class="timeline-item__dot"></span></div>
+                            <article class="timeline-card reveal-up">
+                                <header class="timeline-card__header">
+                                    <span class="timeline-card__year">2022</span>
+                                    <span class="timeline-card__badge timeline-card__badge--milestone">✦ Awal Mula</span>
+                                </header>
+                                <h3 class="timeline-card__title">Pertama Kali Mengenal AI</h3>
+                                <p class="timeline-card__body">Semuanya berawal dari rasa penasaran terhadap kecerdasan buatan. Awalnya saya hanya mencoba teknologi baru, tetapi perlahan mulai tertarik pada berbagai kemungkinan yang dapat diciptakan dengannya.</p>
+                            </article>
+                        </li>
+
+                        <li class="timeline-item" data-year="2023" data-kind="spark">
+                            <div class="timeline-item__marker" aria-hidden="true"><span class="timeline-item__dot"></span></div>
+                            <article class="timeline-card reveal-up">
+                                <header class="timeline-card__header">
+                                    <span class="timeline-card__year">2023</span>
+                                    <span class="timeline-card__badge timeline-card__badge--spark">✦ Eksplorasi</span>
+                                </header>
+                                <h3 class="timeline-card__title">Menjelajahi Dunia Digital</h3>
+                                <p class="timeline-card__body">Saya mulai mengenal lebih jauh dunia digital—dari desain dan kreativitas visual hingga pemrograman. Dengan mencoba berbagai hal baru, saya menemukan ketertarikan untuk menciptakan sesuatu melalui ide dan teknologi.</p>
+                            </article>
+                        </li>
+
+                        <li class="timeline-item" data-year="2024" data-kind="milestone">
+                            <div class="timeline-item__marker" aria-hidden="true"><span class="timeline-item__dot"></span></div>
+                            <article class="timeline-card reveal-up">
+                                <header class="timeline-card__header">
+                                    <span class="timeline-card__year">2024</span>
+                                    <span class="timeline-card__badge timeline-card__badge--milestone">✦ Eksperimen</span>
+                                </header>
+                                <h3 class="timeline-card__title">Belajar Lewat Eksperimen</h3>
+                                <p class="timeline-card__body">Saya semakin banyak bereksperimen dan mengembangkan kemampuan. Saya mulai membangun berbagai proyek, mengeksplorasi desain, serta memahami bagaimana teknologi dapat membantu mewujudkan ide menjadi sesuatu yang nyata.</p>
+                            </article>
+                        </li>
+
+                        <li class="timeline-item" data-year="2025" data-kind="spark">
+                            <div class="timeline-item__marker" aria-hidden="true"><span class="timeline-item__dot"></span></div>
+                            <article class="timeline-card reveal-up">
+                                <header class="timeline-card__header">
+                                    <span class="timeline-card__year">2025</span>
+                                    <span class="timeline-card__badge timeline-card__badge--spark">✦ Rasa Ingin Tahu</span>
+                                </header>
+                                <h3 class="timeline-card__title">Melampaui Rasa Ingin Tahu</h3>
+                                <p class="timeline-card__body">Ketertarikan saya meluas ke berbagai bidang: teknologi komputer, sistem operasi, Linux, hingga ilustrasi digital. Saya menyadari selalu ada hal baru yang menarik untuk dipelajari di luar apa yang sudah saya kenal.</p>
+                            </article>
+                        </li>
+
+                        <li class="timeline-item" data-year="2026" data-kind="milestone">
+                            <div class="timeline-item__marker" aria-hidden="true"><span class="timeline-item__dot"></span></div>
+                            <article class="timeline-card reveal-up">
+                                <header class="timeline-card__header">
+                                    <span class="timeline-card__year">2026</span>
+                                    <span class="timeline-card__badge timeline-card__badge--milestone">✦ Menemukan Arah</span>
+                                </header>
+                                <h3 class="timeline-card__title">Menemukan Arah di Informatika</h3>
+                                <p class="timeline-card__body">Kini saya semakin tertarik mendalami Informatika dan mulai mempersiapkan diri untuk melanjutkan pendidikan tinggi. Mengikuti OSN Informatika hingga tingkat provinsi menjadi salah satu pengalaman penting dalam perjalanan ini. Masih banyak hal yang ingin saya pelajari dan kembangkan.</p>
+                            </article>
+                        </li>
+
+                        <li class="timeline-item" data-year="Beyond" data-kind="spark">
+                            <div class="timeline-item__marker" aria-hidden="true"><span class="timeline-item__dot"></span></div>
+                            <article class="timeline-card reveal-up">
+                                <header class="timeline-card__header">
+                                    <span class="timeline-card__year">Beyond</span>
+                                    <span class="timeline-card__badge timeline-card__badge--spark">✦ Berikutnya</span>
+                                </header>
+                                <h3 class="timeline-card__title">Masih Terus Bertumbuh</h3>
+                                <p class="timeline-card__body">Perjalanan ini masih panjang. Saya ingin terus mengeksplorasi berbagai bidang, mencoba hal baru, dan mengembangkan kemampuan tanpa membatasi diri pada satu ketertarikan. Bagi saya, rasa penasaran adalah salah satu alasan untuk terus berkembang.</p>
+                            </article>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Akhir Part 3. Tag yang masih terbuka: <body>, <main id="app-content"> (dilanjutkan di Part 4 dan ditutup di Part 5) -->
+            <!-- Melanjutkan konten di dalam <main id="app-content"> dari Part 3 -->
+
+        <!-- Ornamen Pemisah Antar-Bab -->
+        <div class="crimson-divider" aria-hidden="true">
+            <span class="crimson-divider__line"></span>
+            <span class="crimson-divider__star">✦</span>
+            <span class="crimson-divider__line"></span>
+        </div>
+
+        <!-- =================================================================
+             SECTION 05 — SELECTED WORKS & THE PROCESS (PAMERAN KARYA)
+             ================================================================= -->
+        <section id="works" class="section works-section" aria-labelledby="works-heading">
+            <div class="works-ambient-orb" aria-hidden="true"></div>
+
+            <div class="container">
+                <header class="section-header reveal-up">
+                    <span class="section-tag">
+                        <span class="section-tag__pulse" aria-hidden="true"></span>
+                        <span>✦ 05 // PAMERAN KARYA &amp; CATATAN PROSES</span>
+                    </span>
+                    <div class="section-header__split">
+                        <h2 id="works-heading" class="section-title">
+                            Selected works &amp; the <em>stories behind them.</em>
+                        </h2>
+                        <p class="section-subtitle">
+                            Jelajahi proyek personal dan organisasi melalui ringkasan singkat, konteks, serta tautan ke masing-masing karya.
+                        </p>
+                    </div>
+                </header>
+
+                <!-- Filter Karya Instan (Capsule Filter Bar) -->
+                <div class="works-filter-bar reveal-up" role="toolbar" aria-label="Filter kategori karya">
+                    <button type="button" class="filter-pill is-active" data-filter="all" aria-pressed="true">
+                        <span class="filter-pill__dot" aria-hidden="true"></span>
+                        <span>All Works</span>
+                        <span class="filter-pill__count">04</span>
+                    </button>
+                    <button type="button" class="filter-pill" data-filter="personal" aria-pressed="false">
+                        <span class="filter-pill__dot" aria-hidden="true"></span>
+                        <span>Personal</span>
+                        <span class="filter-pill__count">01</span>
+                    </button>
+                    <button type="button" class="filter-pill" data-filter="organization" aria-pressed="false">
+                        <span class="filter-pill__dot" aria-hidden="true"></span>
+                        <span>Organization</span>
+                        <span class="filter-pill__count">02</span>
+                    </button>
+                    <button type="button" class="filter-pill" data-filter="experiment" aria-pressed="false">
+                        <span class="filter-pill__dot" aria-hidden="true"></span>
+                        <span>Experiment</span>
+                        <span class="filter-pill__count">01</span>
+                    </button>
+                </div>
+
+                <!-- Galeri Zig-Zag Selected Works -->
+                <div class="works-showcase" id="works-showcase" aria-live="polite">
+                    <!-- =====================================================
+                         KARYA 01: WEBSITE UCAPAN PERPISAHAN UNTUK BU DESTY
+                         ===================================================== -->
+                    <article class="work-item reveal-up" data-category="personal" data-work-id="bu-desty">
+                        <div class="work-item__grid">
+                            <!-- Visual Kiri -->
+                            <div class="work-visual">
+                                <div class="work-visual__frame">
+                                    <div class="work-visual__topbar" aria-hidden="true">
+                                        <span class="work-visual__dots"><i></i><i></i><i></i></span>
+                                        <span class="work-visual__path">bu-desty://apresiasi/kenangan</span>
+                                        <span class="work-visual__year">2026</span>
+                                    </div>
+
+                                    <!-- Tempatkan gambar proyek di: assets/images/work-bu-desty.jpg -->
+                                    <img
+                                        src="assets/images/work-bu-desty.jpg"
+                                        alt="Pratinjau website ucapan perpisahan untuk Ibu Desty"
+                                        class="work-visual__img"
+                                        loading="lazy"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                    >
+                                    <div class="work-visual__fallback" aria-hidden="true">
+                                        <svg viewBox="0 0 640 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="640" height="400" fill="#0B090E"/>
+                                            <circle cx="500" cy="90" r="160" fill="#E11D48" fill-opacity="0.18"/>
+                                            <rect x="44" y="46" width="552" height="308" rx="12" fill="#120E14" stroke="#E11D48" stroke-opacity="0.32"/>
+                                            <line x1="170" y1="46" x2="170" y2="354" stroke="#F4F0EA" stroke-opacity="0.08"/>
+                                            <rect x="64" y="76" width="84" height="10" rx="5" fill="#E11D48" fill-opacity="0.65"/>
+                                            <rect x="64" y="102" width="68" height="8" rx="4" fill="#9CA3AF" fill-opacity="0.25"/>
+                                            <rect x="64" y="122" width="76" height="8" rx="4" fill="#9CA3AF" fill-opacity="0.25"/>
+                                            <rect x="202" y="78" width="210" height="18" rx="4" fill="#F4F0EA" fill-opacity="0.85"/>
+                                            <rect x="202" y="114" width="340" height="8" rx="4" fill="#9CA3AF" fill-opacity="0.35"/>
+                                            <rect x="202" y="134" width="310" height="8" rx="4" fill="#9CA3AF" fill-opacity="0.35"/>
+                                            <rect x="202" y="154" width="260" height="8" rx="4" fill="#9CA3AF" fill-opacity="0.35"/>
+                                            <rect x="202" y="192" width="356" height="92" rx="8" fill="#09070A" stroke="#E11D48" stroke-opacity="0.4"/>
+                                            <circle cx="224" cy="222" r="5" fill="#E11D48"/>
+                                            <rect x="240" y="218" width="180" height="8" rx="4" fill="#FB7185" fill-opacity="0.8"/>
+                                            <rect x="240" y="240" width="270" height="7" rx="3.5" fill="#9CA3AF" fill-opacity="0.35"/>
+                                        </svg>
+                                        <span class="work-visual__fallback-tag">PREVIEW // BU_DESTY.WEB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Narasi Kanan -->
+                            <div class="work-details">
+                                <div class="work-details__meta">
+                                    <span class="work-details__index">KARYA 01</span>
+                                    <span class="work-details__sep" aria-hidden="true">//</span>
+                                    <span class="work-details__category">Proyek personal</span>
+                                    <span class="work-details__sep" aria-hidden="true">·</span>
+                                    <span class="work-details__subtitle">Website apresiasi dan kenangan</span>
+                                </div>
+
+                                <h3 class="work-details__title">Website Ucapan Perpisahan untuk Bu Desty</h3>
+
+                                <p class="work-details__summary">
+                                    Website apresiasi dan kenangan untuk Ibu Desty, berisi pesan dari para siswa dalam sebuah halaman digital. Proyek ini menjadi cara saya menggabungkan teknologi dengan sesuatu yang personal.
+                                </p>
+
+                                <ul class="work-details__stack" aria-label="Informasi proyek Website Ucapan Perpisahan untuk Bu Desty">
+                                    <li>Proyek personal</li>
+                                    <li>Apresiasi dan kenangan</li>
+                                    <li>Pesan dari para siswa</li>
+                                </ul>
+
+                                <div class="work-details__actions">
+                                    <button
+                                        type="button"
+                                        class="btn-process-toggle"
+                                        aria-expanded="false"
+                                        aria-controls="drawer-bu-desty"
+                                        data-drawer-target="drawer-bu-desty"
+                                    >
+                                        <span class="btn-process-toggle__label">Lihat Detail Proyek</span>
+                                        <span class="btn-process-toggle__symbol" aria-hidden="true">+</span>
+                                    </button>
+
+                                    <a href="https://adnangorengankww.github.io/bu.desty.guru.kesayangan/" target="_blank" rel="noopener noreferrer" class="work-ext-link" aria-label="Lihat website ucapan perpisahan untuk Bu Desty">
+                                        <span>Lihat Proyek</span>
+                                        <span aria-hidden="true">↗</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Expandable Project Details Drawer 01 -->
+                        <div class="process-drawer" id="drawer-bu-desty" aria-hidden="true">
+                            <div class="process-drawer__inner">
+                                <div class="process-drawer__content">
+                                    <div class="process-drawer__header">
+                                        <span class="process-drawer__tag">✦ DETAIL PROYEK // KARYA 01</span>
+                                        <span class="process-drawer__status">PROYEK PERSONAL</span>
+                                    </div>
+
+                                    <div class="process-drawer__columns">
+                                        <div class="process-box">
+                                            <h4>01. Tujuan</h4>
+                                            <p>
+                                                Website apresiasi dan kenangan untuk Ibu Desty.
+                                            </p>
+                                        </div>
+
+                                        <div class="process-box process-box--flaw">
+                                            <h4>02. Isi Proyek</h4>
+                                            <p>
+                                                Halaman digital ini berisi pesan dari para siswa.
+                                            </p>
+                                        </div>
+
+                                        <div class="process-box">
+                                            <h4>03. Konteks</h4>
+                                            <p>
+                                                Proyek ini menggabungkan teknologi dengan sesuatu yang personal.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- =====================================================
+                         KARYA 02: WEBSITE JURNALISTIK SMAN 3 BANJAR
+                         ===================================================== -->
+                    <article class="work-item work-item--reverse reveal-up" data-category="organization" data-work-id="jurnalistik-sman3-banjar">
+                        <div class="work-item__grid">
+                            <!-- Visual Kanan (pada desktop) -->
+                            <div class="work-visual">
+                                <div class="work-visual__frame">
+                                    <div class="work-visual__topbar" aria-hidden="true">
+                                        <span class="work-visual__dots"><i></i><i></i><i></i></span>
+                                        <span class="work-visual__path">jurnalistik-sman3-banjar://media/publikasi</span>
+                                        <span class="work-visual__year">2025</span>
+                                    </div>
+
+                                    <!-- Tempatkan gambar proyek di: assets/images/work-jurnalistik-sman3-banjar.jpg -->
+                                    <img
+                                        src="assets/images/work-jurnalistik-sman3-banjar.jpg"
+                                        alt="Pratinjau website Jurnalistik SMAN 3 Banjar"
+                                        class="work-visual__img"
+                                        loading="lazy"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                    >
+                                    <div class="work-visual__fallback" aria-hidden="true">
+                                        <svg viewBox="0 0 640 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="640" height="400" fill="#0A080C"/>
+                                            <circle cx="320" cy="200" r="150" fill="#E11D48" fill-opacity="0.16"/>
+                                            <circle cx="320" cy="200" r="110" stroke="#E11D48" stroke-opacity="0.35" stroke-dasharray="4 6"/>
+                                            <circle cx="320" cy="200" r="70" stroke="#FB7185" stroke-opacity="0.45"/>
+                                            <!-- Audio Waveform Bars -->
+                                            <g stroke="#E11D48" stroke-width="4" stroke-linecap="round">
+                                                <line x1="160" y1="185" x2="160" y2="215"/>
+                                                <line x1="184" y1="168" x2="184" y2="232"/>
+                                                <line x1="208" y1="145" x2="208" y2="255"/>
+                                                <line x1="232" y1="175" x2="232" y2="225"/>
+                                                <line x1="256" y1="130" x2="256" y2="270" stroke="#FB7185"/>
+                                                <line x1="280" y1="152" x2="280" y2="248"/>
+                                                <line x1="304" y1="115" x2="304" y2="285" stroke="#FB7185"/>
+                                                <line x1="328" y1="140" x2="328" y2="260"/>
+                                                <line x1="352" y1="122" x2="352" y2="278" stroke="#FB7185"/>
+                                                <line x1="376" y1="160" x2="376" y2="240"/>
+                                                <line x1="400" y1="138" x2="400" y2="262"/>
+                                                <line x1="424" y1="170" x2="424" y2="230"/>
+                                                <line x1="448" y1="154" x2="448" y2="246"/>
+                                                <line x1="472" y1="182" x2="472" y2="218"/>
+                                            </g>
+                                        </svg>
+                                        <span class="work-visual__fallback-tag">PREVIEW // JURNALISTIK_SMAN3_BANJAR.WEB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Narasi Kiri (pada desktop) -->
+                            <div class="work-details">
+                                <div class="work-details__meta">
+                                    <span class="work-details__index">KARYA 02</span>
+                                    <span class="work-details__sep" aria-hidden="true">//</span>
+                                    <span class="work-details__category">Organisasi</span>
+                                    <span class="work-details__sep" aria-hidden="true">·</span>
+                                    <span class="work-details__subtitle">Media informasi dan publikasi</span>
+                                </div>
+
+                                <h3 class="work-details__title">Website Jurnalistik SMAN 3 Banjar</h3>
+
+                                <p class="work-details__summary">
+                                    Mengembangkan dan mengelola website organisasi Jurnalistik SMAN 3 Banjar sebagai media informasi dan publikasi bagi kebutuhan organisasi.
+                                </p>
+
+                                <ul class="work-details__stack" aria-label="Informasi proyek Website Jurnalistik SMAN 3 Banjar">
+                                    <li>Organisasi Jurnalistik</li>
+                                    <li>Media informasi</li>
+                                    <li>Media publikasi</li>
+                                </ul>
+
+                                <div class="work-details__actions">
+                                    <button
+                                        type="button"
+                                        class="btn-process-toggle"
+                                        aria-expanded="false"
+                                        aria-controls="drawer-jurnalistik-sman3-banjar"
+                                        data-drawer-target="drawer-jurnalistik-sman3-banjar"
+                                    >
+                                        <span class="btn-process-toggle__label">Lihat Detail Proyek</span>
+                                        <span class="btn-process-toggle__symbol" aria-hidden="true">+</span>
+                                    </button>
+
+                                    <a href="https://jurnalistikofficialsmantiban.github.io/jurnalis/" target="_blank" rel="noopener noreferrer" class="work-ext-link" aria-label="Lihat website Jurnalistik SMAN 3 Banjar">
+                                        <span>Lihat Proyek</span>
+                                        <span aria-hidden="true">↗</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Expandable Project Details Drawer 02 -->
+                        <div class="process-drawer" id="drawer-jurnalistik-sman3-banjar" aria-hidden="true">
+                            <div class="process-drawer__inner">
+                                <div class="process-drawer__content">
+                                    <div class="process-drawer__header">
+                                        <span class="process-drawer__tag">✦ DETAIL PROYEK // KARYA 02</span>
+                                        <span class="process-drawer__status">ORGANISASI</span>
+                                    </div>
+
+                                    <div class="process-drawer__columns">
+                                        <div class="process-box">
+                                            <h4>01. Peran</h4>
+                                            <p>
+                                                Mengembangkan dan mengelola website organisasi Jurnalistik SMAN 3 Banjar.
+                                            </p>
+                                        </div>
+
+                                        <div class="process-box process-box--flaw">
+                                            <h4>02. Fungsi</h4>
+                                            <p>
+                                                Website ini menjadi media informasi bagi kebutuhan organisasi.
+                                            </p>
+                                        </div>
+
+                                        <div class="process-box">
+                                            <h4>03. Publikasi</h4>
+                                            <p>
+                                                Karya ini juga digunakan sebagai media publikasi organisasi.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- =====================================================
+                         KARYA 03: WEBSITE PENERIMAAN ANGGOTA BARU JURNALISTIK
+                         ===================================================== -->
+                    <article class="work-item reveal-up" data-category="organization" data-work-id="jurnalistik-penerimaan-anggota">
+                        <div class="work-item__grid">
+                            <!-- Visual Kiri -->
+                            <div class="work-visual">
+                                <div class="work-visual__frame">
+                                    <div class="work-visual__topbar" aria-hidden="true">
+                                        <span class="work-visual__dots"><i></i><i></i><i></i></span>
+                                        <span class="work-visual__path">jurnalistik-penerimaan://anggota-baru/2026</span>
+                                        <span class="work-visual__year">2026</span>
+                                    </div>
+
+                                    <!-- Tempatkan gambar proyek di: assets/images/work-jurnalistik-penerimaan.jpg -->
+                                    <img
+                                        src="assets/images/work-jurnalistik-penerimaan.jpg"
+                                        alt="Pratinjau website penerimaan anggota baru Jurnalistik"
+                                        class="work-visual__img"
+                                        loading="lazy"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                    >
+                                    <div class="work-visual__fallback" aria-hidden="true">
+                                        <svg viewBox="0 0 640 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="640" height="400" fill="#0B090D"/>
+                                            <circle cx="150" cy="300" r="170" fill="#E11D48" fill-opacity="0.16"/>
+                                            <!-- Grid Cards -->
+                                            <rect x="56" y="64" width="248" height="126" rx="12" fill="#151017" stroke="#E11D48" stroke-opacity="0.5"/>
+                                            <circle cx="96" cy="127" r="20" fill="#E11D48" fill-opacity="0.25" stroke="#E11D48"/>
+                                            <rect x="132" y="112" width="136" height="10" rx="5" fill="#F4F0EA" fill-opacity="0.85"/>
+                                            <rect x="132" y="132" width="96" height="8" rx="4" fill="#FB7185" fill-opacity="0.65"/>
+
+                                            <rect x="336" y="64" width="248" height="126" rx="12" fill="#151017" stroke="#F4F0EA" stroke-opacity="0.12"/>
+                                            <path d="M372 156 C410 156, 425 92, 495 92" stroke="#E11D48" stroke-width="3" stroke-linecap="round"/>
+                                            <circle cx="495" cy="92" r="6" fill="#FB7185"/>
+
+                                            <rect x="56" y="214" width="528" height="122" rx="12" fill="#120E14" stroke="#E11D48" stroke-opacity="0.28"/>
+                                            <rect x="88" y="254" width="160" height="42" rx="21" fill="#E11D48"/>
+                                            <rect x="272" y="254" width="140" height="42" rx="21" stroke="#E11D48" stroke-opacity="0.6"/>
+                                            <rect x="436" y="254" width="116" height="42" rx="21" fill="#1C141B"/>
+                                        </svg>
+                                        <span class="work-visual__fallback-tag">PREVIEW // JURNALISTIK_PENERIMAAN.WEB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Narasi Kanan -->
+                            <div class="work-details">
+                                <div class="work-details__meta">
+                                    <span class="work-details__index">KARYA 03</span>
+                                    <span class="work-details__sep" aria-hidden="true">//</span>
+                                    <span class="work-details__category">Organisasi</span>
+                                    <span class="work-details__sep" aria-hidden="true">·</span>
+                                    <span class="work-details__subtitle">Pendaftaran anggota baru</span>
+                                </div>
+
+                                <h3 class="work-details__title">Website Penerimaan Anggota Baru Jurnalistik</h3>
+
+                                <p class="work-details__summary">
+                                    Website untuk mendukung pendaftaran anggota baru organisasi Jurnalistik dengan proses berbasis web yang lebih praktis dan mudah diakses.
+                                </p>
+
+                                <ul class="work-details__stack" aria-label="Informasi proyek Website Penerimaan Anggota Baru Jurnalistik">
+                                    <li>Pendaftaran anggota baru</li>
+                                    <li>Proses berbasis web</li>
+                                    <li>Praktis dan mudah diakses</li>
+                                </ul>
+
+                                <div class="work-details__actions">
+                                    <button
+                                        type="button"
+                                        class="btn-process-toggle"
+                                        aria-expanded="false"
+                                        aria-controls="drawer-jurnalistik-penerimaan-anggota"
+                                        data-drawer-target="drawer-jurnalistik-penerimaan-anggota"
+                                    >
+                                        <span class="btn-process-toggle__label">Lihat Detail Proyek</span>
+                                        <span class="btn-process-toggle__symbol" aria-hidden="true">+</span>
+                                    </button>
+
+                                    <a href="https://adnangorengankww.github.io/jurnalispengumuman2026/" target="_blank" rel="noopener noreferrer" class="work-ext-link" aria-label="Lihat website penerimaan anggota baru Jurnalistik">
+                                        <span>Lihat Proyek</span>
+                                        <span aria-hidden="true">↗</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Expandable Project Details Drawer 03 -->
+                        <div class="process-drawer" id="drawer-jurnalistik-penerimaan-anggota" aria-hidden="true">
+                            <div class="process-drawer__inner">
+                                <div class="process-drawer__content">
+                                    <div class="process-drawer__header">
+                                        <span class="process-drawer__tag">✦ DETAIL PROYEK // KARYA 03</span>
+                                        <span class="process-drawer__status">ORGANISASI</span>
+                                    </div>
+
+                                    <div class="process-drawer__columns">
+                                        <div class="process-box">
+                                            <h4>01. Tujuan</h4>
+                                            <p>
+                                                Website ini mendukung pendaftaran anggota baru organisasi Jurnalistik.
+                                            </p>
+                                        </div>
+
+                                        <div class="process-box process-box--flaw">
+                                            <h4>02. Proses</h4>
+                                            <p>
+                                                Pendaftaran dilakukan melalui proses berbasis web.
+                                            </p>
+                                        </div>
+
+                                        <div class="process-box">
+                                            <h4>03. Akses</h4>
+                                            <p>
+                                                Proses pendaftaran dirancang agar lebih praktis dan mudah diakses.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- =====================================================
+                         KARYA 04: LOVE CALCULATOR
+                         ===================================================== -->
+                    <article class="work-item work-item--reverse reveal-up" data-category="experiment" data-work-id="love-calculator">
+                        <div class="work-item__grid">
+                            <div class="work-visual">
+                                <div class="work-visual__frame">
+                                    <div class="work-visual__topbar" aria-hidden="true">
+                                        <span class="work-visual__dots"><i></i><i></i><i></i></span>
+                                        <span class="work-visual__path">love-calculator://interactive-project</span>
+                                        <span class="work-visual__year">2026</span>
+                                    </div>
+                                    <img
+                                        src="assets/images/work-love-calculator.jpg"
+                                        alt="Pratinjau proyek Love Calculator"
+                                        class="work-visual__img"
+                                        loading="lazy"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                    >
+                                    <div class="work-visual__fallback" aria-hidden="true">
+                                        <svg viewBox="0 0 640 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="640" height="400" fill="#0B090E"/>
+                                            <circle cx="320" cy="200" r="155" fill="#E11D48" fill-opacity="0.14"/>
+                                            <rect x="94" y="72" width="452" height="256" rx="18" fill="#120E14" stroke="#E11D48" stroke-opacity="0.4"/>
+                                            <rect x="144" y="126" width="142" height="40" rx="20" fill="#1C141B" stroke="#FB7185" stroke-opacity="0.6"/>
+                                            <rect x="354" y="126" width="142" height="40" rx="20" fill="#1C141B" stroke="#FB7185" stroke-opacity="0.6"/>
+                                            <path d="M320 260C296 239 274 221 274 199C274 182 287 170 303 170C312 170 319 175 320 183C323 175 330 170 339 170C355 170 368 182 368 199C368 221 345 239 320 260Z" fill="#E11D48"/>
+                                        </svg>
+                                        <span class="work-visual__fallback-tag">PREVIEW // LOVE_CALCULATOR.WEB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-details">
+                                <div class="work-details__meta">
+                                    <span class="work-details__index">KARYA 04</span>
+                                    <span class="work-details__sep" aria-hidden="true">//</span>
+                                    <span class="work-details__category">Eksperimen kecil</span>
+                                    <span class="work-details__sep" aria-hidden="true">·</span>
+                                    <span class="work-details__subtitle">Eksperimen interaktif</span>
+                                </div>
+
+                                <h3 class="work-details__title">Love Calculator</h3>
+                                <p class="work-details__summary">
+                                    Proyek sederhana untuk bersenang-senang: pengguna memasukkan dua nama untuk mendapatkan hasil kecocokan secara interaktif. Sebuah eksplorasi dari ide spontan menjadi sesuatu yang nyata.
+                                </p>
+
+                                <ul class="work-details__stack" aria-label="Informasi proyek Love Calculator">
+                                    <li>Eksperimen kecil</li>
+                                    <li>Dua nama</li>
+                                    <li>Hasil kecocokan interaktif</li>
+                                </ul>
+
+                                <div class="work-details__actions">
+                                    <button
+                                        type="button"
+                                        class="btn-process-toggle"
+                                        aria-expanded="false"
+                                        aria-controls="drawer-love-calculator"
+                                        data-drawer-target="drawer-love-calculator"
+                                    >
+                                        <span class="btn-process-toggle__label">Lihat Detail Proyek</span>
+                                        <span class="btn-process-toggle__symbol" aria-hidden="true">+</span>
+                                    </button>
+                                    <a href="https://adnangorengankww.github.io/kecocokan.cinta/" target="_blank" rel="noopener noreferrer" class="work-ext-link" aria-label="Lihat proyek Love Calculator">
+                                        <span>Lihat Proyek</span>
+                                        <span aria-hidden="true">↗</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="process-drawer" id="drawer-love-calculator" aria-hidden="true">
+                            <div class="process-drawer__inner">
+                                <div class="process-drawer__content">
+                                    <div class="process-drawer__header">
+                                        <span class="process-drawer__tag">✦ DETAIL PROYEK // KARYA 04</span>
+                                        <span class="process-drawer__status">EKSPERIMEN KECIL</span>
+                                    </div>
+                                    <div class="process-drawer__columns">
+                                        <div class="process-box">
+                                            <h4>01. Konsep</h4>
+                                            <p>Proyek sederhana yang dibuat untuk bersenang-senang.</p>
+                                        </div>
+                                        <div class="process-box process-box--flaw">
+                                            <h4>02. Interaksi</h4>
+                                            <p>Pengguna memasukkan dua nama.</p>
+                                        </div>
+                                        <div class="process-box">
+                                            <h4>03. Hasil</h4>
+                                            <p>Proyek menampilkan hasil kecocokan secara interaktif.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Akhir Part 4. Tag yang masih terbuka: <body>, <main id="app-content"> (dilanjutkan dan ditutup di Part 5) -->
+            <!-- Melanjutkan konten di dalam <main id="app-content"> dari Part 4 -->
+
+        <!-- Ornamen Pemisah Antar-Bab -->
+        <div class="crimson-divider" aria-hidden="true">
+            <span class="crimson-divider__line"></span>
+            <span class="crimson-divider__star">✦</span>
+            <span class="crimson-divider__line"></span>
+        </div>
+
+        <!-- =================================================================
+             SECTION 06 — "THE NOW" & LOOKING FORWARD (FOKUS SAAT INI)
+             ================================================================= -->
+        <section id="now" class="section now-section" aria-labelledby="now-heading">
+            <div class="container">
+                <header class="section-header reveal-up">
+                    <span class="section-tag">
+                        <span class="section-tag__pulse" aria-hidden="true"></span>
+                        <span>✦ 06 // SAAT INI &amp; KE DEPANNYA</span>
+                    </span>
+                    <div class="section-header__split">
+                        <h2 id="now-heading" class="section-title">
+                            The “Now” &amp; <em>looking forward.</em>
+                        </h2>
+                        <p class="section-subtitle">
+                            Snapshot hidup dari meja kerja saya bulan ini—apa yang sedang saya pelajari di larut malam, buku yang menemani di samping cangkir kopi, dan arah eksplorasi ke depan.
+                        </p>
+                    </div>
+                </header>
+
+                <!-- Horizontal Dashboard Status Card -->
+                <article class="now-dashboard reveal-up" aria-label="Dashboard Fokus Saat Ini">
+                    <div class="now-dashboard__grid-bg" aria-hidden="true"></div>
+
+                    <!-- Top Bar Status -->
+                    <div class="now-dashboard__topbar">
+                        <div class="now-dashboard__status-pill">
+                            <span class="now-dashboard__live-dot" aria-hidden="true"></span>
+                            <span>LIVE TELEMETRY // NOVEMBER 2026</span>
+                        </div>
+                        <div class="now-dashboard__coords">
+                            <span>MODE: DEEP EXPLORATION</span>
+                            <span aria-hidden="true">·</span>
+                            <span>LATENCY: LOW</span>
+                        </div>
+                    </div>
+
+                    <!-- 3-Column Now Content -->
+                    <div class="now-dashboard__body" id="now-dashboard-body">
+                        <!-- Kolom 1: Currently Exploring -->
+                        <div class="now-panel">
+                            <div class="now-panel__header">
+                                <span class="now-panel__index">01 // LABS</span>
+                                <span class="now-panel__badge">ACTIVE</span>
+                            </div>
+                            <h3 class="now-panel__title">Currently Exploring</h3>
+                            <p class="now-panel__lead" id="now-exploring-text">
+                                Currently exploring: <strong>WebGL Shaders</strong>, <strong>Creative Coding</strong>, &amp; membaca buku tentang <strong>psikologi desain</strong>.
+                            </p>
+                            <ul class="now-panel__list" id="now-exploring-list">
+                                <li>Menulis fragmen GLSL sederhana untuk efek distorsi cahaya organik di permukaan kartu.</li>
+                                <li>Membangun sistem gerak berbasis fisika pegas murni tanpa ketergantungan library besar.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Kolom 2: Reading & Listening -->
+                        <div class="now-panel">
+                            <div class="now-panel__header">
+                                <span class="now-panel__index">02 // INPUTS</span>
+                                <span class="now-panel__badge">ON DESK</span>
+                            </div>
+                            <h3 class="now-panel__title">Reading &amp; Fuel</h3>
+                            <div class="now-book-card">
+                                <span class="now-book-card__label">BUKU DI MEJA MALAM INI</span>
+                                <p class="now-book-card__title">“The Design of Everyday Things” &amp; “The Poetics of Space”</p>
+                                <p class="now-book-card__note">
+                                    Merenungkan bagaimana arsitektur ruang fisik yang intim dapat diterjemahkan ke dalam ruang digital berlatar gelap.
+                                </p>
+                            </div>
+                            <div class="now-meta-row">
+                                <span>☕ Seduhan: V60 Bali Kintamani</span>
+                                <span>🎧 Putaran: Ambient Lo-Fi Synth</span>
+                            </div>
+                        </div>
+
+                        <!-- Kolom 3: Looking Forward -->
+                        <div class="now-panel">
+                            <div class="now-panel__header">
+                                <span class="now-panel__index">03 // HORIZON</span>
+                                <span class="now-panel__badge">2027 VISION</span>
+                            </div>
+                            <h3 class="now-panel__title">Looking Forward</h3>
+                            <p class="now-panel__lead">
+                                Ke mana rasa penasaran ini akan bermuara dalam beberapa tahun ke depan?
+                            </p>
+                            <p class="now-panel__text">
+                                Saya ingin terlibat dalam penciptaan perangkat lunak dan pengalaman web yang terasa tenang, manusiawi, serta berumur panjang—berkolaborasi dengan tim atau individu yang peduli pada detail terkecil sekalipun.
+                            </p>
+                            <div class="now-panel__footer-tag">
+                                <span>✦ Terbuka untuk kolaborasi terpilih &amp; diskusi ide</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+    <!-- Penutupan <main id="app-content"> -->
+
+    <!-- =====================================================================
+         SECTION 07 — FOOTER & CONTACT (PENUTUP MALAM)
+         ===================================================================== -->
+    <footer id="contact" class="site-footer" aria-labelledby="footer-heading">
+        <!-- Pendaran Crimson Ember dari Dasar Layar -->
+        <div class="footer-ember-aura" aria-hidden="true"></div>
+
+        <div class="container">
+            <div class="footer-hero reveal-up">
+                <span class="section-tag">
+                    <span class="section-tag__pulse" aria-hidden="true"></span>
+                    <span>✦ AKHIR DARI HALAMAN, AWAL DARI DISKUSI</span>
+                </span>
+
+                <h2 id="footer-heading" class="footer-title">
+                    Let’s explore ideas together <em>in the dark.</em>
+                </h2>
+
+                <p class="footer-lead">
+                    Punya gagasan liar yang belum berbentuk, ingin membedah antarmuka, atau sekadar menyapa sesama penjelajah malam? WhatsApp saya selalu terbuka.
+                </p>
+
+                <div class="footer-cta-group">
+                    <a href="https://wa.me/6285723616706?text=Halo%20Adnan%2C%20saya%20tertarik%20untuk%20mengobrol%20tentang%20karya%20dan%20ide%20yang%20kamu%20buat." target="_blank" rel="noopener noreferrer" class="btn-crimson">
+                        <span>Chat WhatsApp ↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Social Links & Navigation Grid -->
+            <div class="footer-links-bar reveal-up">
+                <div class="footer-socials" aria-label="Tautan Jejaring Sosial">
+                    <a href="https://github.com/AdnanGorenganKww" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <span class="social-link__name">GitHub</span>
+                        <span class="social-link__arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@hx22l" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <span class="social-link__name">TikTok</span>
+                        <span class="social-link__arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a href="https://www.instagram.com/adnanmubarak123/" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <span class="social-link__name">Instagram</span>
+                        <span class="social-link__arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a href="#hero" class="social-link social-link--top">
+                        <span class="social-link__name">Kembali ke Atas</span>
+                        <span class="social-link__arrow" aria-hidden="true">↑</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Warm Closing Sign-Off -->
+            <div class="footer-bottom">
+                <p class="footer-bottom__copy">
+                    © 2026 Adnan Sya’ban Mubarok — <span>The Person Behind.</span> Dirakit perlahan dengan kejujuran proses.
+                </p>
+                <p class="footer-bottom__warmth">
+                    Terima kasih sudah membaca sampai baris terakhir. Semoga malammu tenang dan rasa penasaranmu tetap menyala.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =====================================================================
+         FLOATING MIDNIGHT AUDIO / AMBIENT TOGGLE (POJOK KANAN BAWAH)
+         ===================================================================== -->
+    <aside class="midnight-audio-widget" aria-label="Kontrol Suara Latar Malam">
+        <button
+            type="button"
+            class="audio-toggle-btn"
+            id="midnight-audio-toggle"
+            aria-pressed="false"
+            aria-label="Nyalakan suara latar Midnight Ambient"
+            title="Midnight Audio / Ambient Synth & Rain"
+        >
+            <span class="audio-toggle-btn__waves" aria-hidden="true">
+                <i class="wave-bar wave-bar--1"></i>
+                <i class="wave-bar wave-bar--2"></i>
+                <i class="wave-bar wave-bar--3"></i>
+                <i class="wave-bar wave-bar--4"></i>
+            </span>
+            <span class="audio-toggle-btn__text" id="midnight-audio-label">Midnight Audio: Off</span>
+        </button>
+    </aside>
+
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+<!-- Akhir Part 5. Seluruh tag pembungkus (<main>, <body>, <html>) telah ditutup dengan lengkap dan valid. -->
